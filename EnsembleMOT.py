@@ -11,8 +11,7 @@ from os.path import join, exists
 
 
 SEQUENCES = [
-    'MOT17-02-FRCNN', 'MOT17-04-FRCNN', 'MOT17-05-FRCNN',
-    'MOT17-09-FRCNN', 'MOT17-10-FRCNN', 'MOT17-11-FRCNN', 'MOT17-13-FRCNN'
+    'MOT20-01'
 ]
 
 
@@ -143,10 +142,9 @@ if __name__ == '__main__':
     dir_out = join(dir_results, 'EnsembleMOT')
     os.makedirs(dir_out, exist_ok=True)
     methods = [
-        join(dir_results, 'FairMOT'),
-        join(dir_results, 'SiamMOT'),
-        # join(root, 'TransTrack'),
-        # join(root, 'CenterTrack'),
+        join(dir_results, 'AdapTrack'),
+        join(dir_results, 'BoostTrack'),
+        # join(dir_results, 'BoostTrack11'),
     ]
     MERGE_MODE = 'track1'
     for i, video in enumerate(SEQUENCES, start=1):
